@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",                           // Modern target
+    "module": "CommonJS",                         // Required by AWS Lambda
+    "outDir": "lambda-dist",                      // Clear, dedicated output directory
+    "noEmit": false,
+    "strict": true,
+    "esModuleInterop": true,                      // For clean imports like import AWS from 'aws-sdk'
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/lambda/**/*"]
+}
